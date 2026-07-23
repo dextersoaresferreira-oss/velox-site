@@ -63,4 +63,12 @@ nav a:hover{
     border-radius:50px;
     text-decoration:none;
     font-weight:600;
-}
+}.logo{
+     width:260px;
+     height:auto;
+     transition:.3s;
+ }
+
+ .logo:hover{
+     transform:scale(1.03);
+ }
