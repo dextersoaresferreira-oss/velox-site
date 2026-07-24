@@ -1,4 +1,6 @@
-/* RESET */
+/* ==========================================================
+   RESET
+========================================================== */
 
 *{
     margin:0;
@@ -6,385 +8,1046 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#071424;
-    color:#fff;
+html{
+    scroll-behavior:smooth;
 }
 
-/* HERO */
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#FFFFFF;
+
+    color:#0F172A;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+}
+
+/* ==========================================================
+   CORES
+========================================================== */
+
+:root{
+
+    --primary:#1EA7FF;
+    --primary-dark:#0087E6;
+
+    --title:#0F172A;
+
+    --text:#475569;
+
+    --light:#F8FBFF;
+
+    --border:#E2E8F0;
+
+    --card:#FFFFFF;
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
 
 .hero{
+
     position:relative;
-    overflow:hidden;
 
     min-height:100vh;
-    padding:40px 8%;
-
-    background:linear-gradient(
-        135deg,
-        #071424 0%,
-        #0D223B 60%,
-        #123D7A 100%
-    );
-}
-
-/* Efeito de luz */
-
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:700px;
-    height:700px;
-
-    top:-250px;
-    right:-220px;
-
-    border-radius:50%;
-
-    background:radial-gradient(
-        circle,
-        rgba(30,167,255,.18) 0%,
-        transparent 70%
-    );
-
-    z-index:0;
-}
-
-/* NAVBAR */
-
-nav{
-
-    position:relative;
-    z-index:2;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-
-    width:380px;
-    height:auto;
-
-    transition:.3s;
-}
-
-.logo:hover{
-
-    transform:scale(1.03);
-}
-
-.whatsapp-btn{
-
-    color:#fff;
-    text-decoration:none;
-
-    border:2px solid #1EA7FF;
-
-    padding:14px 28px;
-
-    border-radius:50px;
-
-    font-weight:600;
-
-    transition:.3s;
-}
-
-.whatsapp-btn:hover{
-
-    background:#1EA7FF;
-
-    box-shadow:0 0 25px rgba(30,167,255,.35);
-}
-
-/* CONTAINER */
-
-.hero-container{
-
-    position:relative;
-    z-index:2;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    gap:80px;
-
-    margin-top:70px;
-}
-
-/* ESQUERDA */
-
-.hero-left{
-
-    flex:1;
-    max-width:620px;
-}
-
-/* SELO */
-
-.partner-badge{
-
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-
-    padding:10px 18px;
-
-    border-radius:50px;
-
-    border:1px solid rgba(255,255,255,.15);
-
-    background:rgba(255,255,255,.05);
-
-    backdrop-filter:blur(10px);
-
-    color:#fff;
-
-    margin-bottom:30px;
-}
-
-.partner-badge strong{
-
-    color:#1EA7FF;
-}
-
-.hero-left h1{
-
-    font-size:68px;
-
-    line-height:1.08;
-
-    font-weight:700;
-}
-
-.hero-left h1 span{
-
-    color:#1EA7FF;
-}
-
-.hero-left p{
-
-    margin:30px 0;
-
-    color:#C8D6E7;
-
-    font-size:20px;
-
-    line-height:1.7;
-}
-
-/* CARD */
-
-.plan-card{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:25px 30px;
-
-    margin:40px 0;
-
-    border-radius:22px;
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(12px);
-}
-
-.plan-speed h2{
-
-    font-size:58px;
-
-    line-height:1;
-}
-
-.plan-speed span{
-
-    color:#1EA7FF;
-
-    font-weight:700;
-
-    letter-spacing:2px;
-}
-
-.plan-price{
-
-    text-align:right;
-}
-
-.plan-price small{
-
-    color:#BFD2E5;
-}
-
-.plan-price h3{
-
-    font-size:42px;
-}
-
-.plan-price h3 span{
-
-    font-size:18px;
-
-    color:#BFD2E5;
-}
-
-/* BENEFÍCIOS */
-
-.hero-benefits{
 
     display:flex;
 
     flex-direction:column;
 
-    gap:18px;
+    overflow:hidden;
+
+    padding:32px 8%;
+
+    background:
+
+    radial-gradient(
+
+        circle at 88% 35%,
+
+        rgba(30,167,255,.18) 0%,
+
+        rgba(30,167,255,.08) 30%,
+
+        transparent 65%
+
+    ),
+
+    linear-gradient(
+
+        135deg,
+
+        #FFFFFF 0%,
+
+        #F8FBFF 50%,
+
+        #EDF6FF 100%
+
+    );
+
+}
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:10;
 
     margin-bottom:40px;
 }
 
-.benefit{
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo{
+
+    width:800px;
+
+    height:auto;
+
+    transition:.30s ease;
+}
+
+.logo:hover{
+
+    transform:scale(1.02);
+}
+
+/* ==========================================================
+   BOTÃO TOPO
+========================================================== */
+
+.whatsapp-btn{
 
     display:flex;
 
+    justify-content:center;
+
     align-items:center;
 
-    gap:15px;
+    padding:16px 32px;
 
-    font-size:18px;
+    border-radius:999px;
 
-    color:#E5EEF8;
-}
+    background:var(--primary);
 
-/* BOTÃO */
-
-.btn{
-
-    display:inline-block;
-
-    padding:18px 40px;
-
-    border-radius:50px;
-
-    background:#1EA7FF;
-
-    color:#fff;
+    color:#FFF;
 
     text-decoration:none;
 
     font-weight:600;
 
-    transition:.3s;
+    transition:.30s ease;
+
+    box-shadow:
+
+        0 15px 35px rgba(30,167,255,.20);
+
 }
 
-.btn:hover{
+.whatsapp-btn:hover{
 
-    transform:translateY(-3px);
+    background:var(--primary-dark);
 
-    box-shadow:0 12px 30px rgba(30,167,255,.35);
-}
+    transform:translateY(-2px);
 
-/* DIREITA */
+    box-shadow:
 
-.hero-right{
+        0 20px 45px rgba(30,167,255,.28);
 
-    flex:1;
+}/* ==========================================================
+    HERO CONTAINER
+ ========================================================== */
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
+ .hero-container{
 
-.hero-image{
+     position:relative;
 
-    width:100%;
-    max-width:680px;
+     z-index:5;
 
-    animation:float 6s ease-in-out infinite;
-}
+     flex:1;
 
-/* ANIMAÇÃO */
+     display:flex;
 
-@keyframes float{
+     justify-content:space-between;
 
-    0%{
-        transform:translateY(0px);
+     align-items:center;
+
+     gap:90px;
+ }
+
+ /* ==========================================================
+    COLUNA ESQUERDA
+ ========================================================== */
+
+ .hero-left{
+
+     flex:0 0 46%;
+
+     max-width:580px;
+ }
+
+ /* ==========================================================
+    BADGE
+ ========================================================== */
+
+ .partner-badge{
+
+     display:inline-flex;
+
+     align-items:center;
+
+     gap:10px;
+
+     padding:10px 18px;
+
+     background:#FFFFFF;
+
+     border:1px solid var(--border);
+
+     border-radius:999px;
+
+     box-shadow:
+
+         0 10px 30px rgba(15,23,42,.05);
+
+     margin-bottom:28px;
+
+     font-size:14px;
+
+     font-weight:500;
+
+     color:#475569;
+ }
+
+ .partner-badge strong{
+
+     color:var(--primary);
+
+     font-weight:700;
+ }
+
+ .partner-badge i{
+
+     color:var(--primary);
+ }
+
+ /* ==========================================================
+    TÍTULO
+ ========================================================== */
+
+ .hero-left h1{
+
+     font-size:64px;
+
+     font-weight:700;
+
+     line-height:1.05;
+
+     letter-spacing:-2px;
+
+     color:var(--title);
+
+     margin-bottom:22px;
+ }
+
+ .hero-left h1 span{
+
+     background:linear-gradient(
+
+         90deg,
+
+         #1EA7FF,
+
+         #007BFF
+
+     );
+
+     -webkit-background-clip:text;
+
+     -webkit-text-fill-color:transparent;
+ }
+
+ /* ==========================================================
+    DESCRIÇÃO
+ ========================================================== */
+
+ .hero-left p{
+
+     font-size:19px;
+
+     line-height:1.8;
+
+     color:var(--text);
+
+     max-width:520px;
+
+     margin-bottom:35px;
+ }
+
+ /* ==========================================================
+    CARD DO PLANO
+ ========================================================== */
+
+ .plan-card{
+
+     display:flex;
+
+     justify-content:space-between;
+
+     align-items:center;
+
+     gap:20px;
+
+     max-width:540px;
+
+     padding:24px 28px;
+
+     background:#FFFFFF;
+
+     border:1px solid var(--border);
+
+     border-radius:22px;
+
+     box-shadow:
+
+         0 25px 45px rgba(15,23,42,.08);
+
+     margin-bottom:30px;
+
+     transition:.30s ease;
+ }
+
+ .plan-card:hover{
+
+     transform:translateY(-6px);
+
+     border-color:var(--primary);
+
+     box-shadow:
+
+         0 35px 55px rgba(15,23,42,.12);
+ }
+
+ /* ==========================================================
+    VELOCIDADE
+ ========================================================== */
+
+ .plan-speed small{
+
+     display:block;
+
+     color:#64748B;
+
+     font-size:13px;
+
+     margin-bottom:6px;
+ }
+
+ .plan-speed h2{
+
+     font-size:54px;
+
+     line-height:1;
+
+     color:var(--title);
+ }
+
+ .plan-speed span{
+
+     display:block;
+
+     margin-top:6px;
+
+     color:var(--primary);
+
+     font-size:15px;
+
+     letter-spacing:2px;
+
+     font-weight:600;
+ }
+
+ /* ==========================================================
+    PREÇO
+ ========================================================== */
+
+ .plan-price{
+
+     text-align:right;
+ }
+
+ .plan-price small{
+
+     display:block;
+
+     color:#64748B;
+
+     font-size:13px;
+
+     margin-bottom:8px;
+ }
+
+ .plan-price h3{
+
+     font-size:38px;
+
+     color:var(--title);
+
+     line-height:1;
+ }
+
+ .plan-price h3 span{
+
+     font-size:16px;
+
+     color:#64748B;
+
+     font-weight:500;
+ }
+
+ /* ==========================================================
+    BENEFÍCIOS
+ ========================================================== */
+
+ .hero-benefits{
+
+     display:flex;
+
+     flex-direction:column;
+
+     gap:16px;
+
+     margin-bottom:35px;
+ }
+
+ .benefit{
+
+     display:flex;
+
+     align-items:center;
+
+     gap:14px;
+
+     color:var(--text);
+
+     font-size:17px;
+ }
+
+ .benefit i{
+
+     width:24px;
+
+     color:var(--primary);
+
+     font-size:18px;
+ }
+
+ /* ==========================================================
+    BOTÃO PRINCIPAL
+ ========================================================== */
+
+ .btn{
+
+         display:flex;
+
+         justify-content:center;
+
+         align-items:center;
+
+         width:100%;
+
+         height:56px;
+
+         margin-top:35px;
+
+         background:linear-gradient(135deg,#1E88FF,#3AA0FF);
+
+         color:#fff;
+
+         text-decoration:none;
+
+         font-size:17px;
+
+         font-weight:600;
+
+         border-radius:14px;
+
+         transition:.3s ease;
+
+         box-shadow:0 10px 25px rgba(30,136,255,.25);
+
+     }
+
+ .btn:hover{
+
+               transform:translateY(-4px);
+
+               box-shadow:0 18px 35px rgba(30,136,255,.35);
+
+               background:linear-gradient(135deg,#167AF0,#2D8CFF);
+
+           }
+
+ /* ==========================================================
+    TEXTO DE CONFIANÇA
+ ========================================================== */
+
+ .hero-info{
+
+     margin-top:22px;
+
+     display:flex;
+
+     gap:12px;
+
+     align-items:center;
+
+     flex-wrap:wrap;
+
+     color:#64748B;
+
+     font-size:14px;
+
+     font-weight:500;
+ }
+
+ .hero-info span{
+
+     color:#CBD5E1;
+ }/* ==========================================================
+     HERO DIREITA
+  ========================================================== */
+
+  .hero-right{
+
+      flex:0 0 54%;
+
+      display:flex;
+
+      justify-content:center;
+
+      align-items:flex-start;
+
+      position:relative;
+
+      overflow:visible;
+
+  }
+
+  .hero-right::before{
+
+      display:none;
+
+  }
+
+  .hero-image{
+
+      width:100%;
+
+      max-width:900px;
+
+      height:auto;
+
+      object-fit:contain;
+
+      margin-top:-300px;
+
+      margin-right:-60px;
+
+      position:relative;
+
+      z-index:2;
+
+      animation:float 6s ease-in-out infinite;
+
+  }
+
+  /* ==========================================================
+     ANIMAÇÃO
+  ========================================================== */
+
+  @keyframes float{
+
+      0%{
+
+          transform:translateY(0px);
+
+      }
+
+      50%{
+
+          transform:translateY(-12px);
+
+      }
+
+      100%{
+
+          transform:translateY(0px);
+
+      }
+
+  }
+
+  /* ==========================================================
+     UTILITÁRIOS
+  ========================================================== */
+
+  img{
+
+      display:block;
+
+      max-width:100%;
+  }
+
+  section{
+
+      padding:90px 8%;
+  }
+
+  /* ==========================================================
+     TABLET
+  ========================================================== */
+
+  @media (max-width:1200px){
+
+      .hero-container{
+
+          gap:60px;
+
+      }
+
+      .hero-left h1{
+
+          font-size:54px;
+
+      }
+
+      .hero-image{
+
+          max-width:620px;
+
+      }
+
+  }
+
+  /* ==========================================================
+     MOBILE
+  ========================================================== */
+
+  @media (max-width:992px){
+
+      nav{
+
+          flex-direction:column;
+
+          gap:20px;
+
+      }
+
+      .logo{
+
+          width:270px;
+
+      }
+
+      .hero{
+
+          min-height:auto;
+
+          padding:30px 6% 60px;
+
+      }
+
+      .hero-container{
+
+          flex-direction:column;
+
+          text-align:center;
+
+          gap:50px;
+
+      }
+
+      .hero-left,
+      .hero-right{
+
+          flex:1;
+
+          max-width:100%;
+
+      }
+
+      .partner-badge{
+
+          margin:0 auto 25px;
+
+      }
+
+      .hero-left h1{
+
+          font-size:46px;
+
+      }
+
+      .hero-left p{
+
+          margin:0 auto 30px;
+
+      }
+
+      .plan-card{
+
+          margin:0 auto 30px;
+
+          flex-direction:column;
+
+          text-align:center;
+
+          gap:20px;
+
+      }
+
+      .plan-price{
+
+          text-align:center;
+
+      }
+
+      .hero-benefits{
+
+          align-items:center;
+
+      }
+
+      .hero-info{
+
+          justify-content:center;
+
+      }
+
+      .btn{
+
+          width:100%;
+
+          max-width:340px;
+
+      }
+
+      .hero-image{
+
+          max-width:500px;
+
+      }
+
+  }
+
+  /* ==========================================================
+     CELULAR
+  ========================================================== */
+
+  @media (max-width:576px){
+
+      .hero{
+
+          padding:25px 5% 50px;
+
+      }
+
+      .logo{
+
+          width:220px;
+
+      }
+
+      .whatsapp-btn{
+
+          width:100%;
+
+      }
+
+      .hero-left h1{
+
+          font-size:36px;
+
+          letter-spacing:-1px;
+
+      }
+
+      .hero-left p{
+
+          font-size:16px;
+
+          line-height:1.7;
+
+      }
+
+      .plan-speed h2{
+
+          font-size:42px;
+
+      }
+
+      .plan-price h3{
+
+          font-size:32px;
+
+      }
+
+      .btn{
+
+          width:100%;
+
+      }
+
+      .hero-image{
+
+          max-width:100%;
+
+      }
+
+  }/* ==========================================================
+      PLANOS
+   ========================================================== */
+
+   .plans{
+
+       padding:100px 8%;
+
+       background:#F8FBFF;
+
+   }
+
+   .section-title{
+
+       text-align:center;
+
+       max-width:700px;
+
+       margin:0 auto 70px;
+
+   }
+
+   .section-title h2{
+
+       font-size:46px;
+
+       color:#0F172A;
+
+       margin-bottom:18px;
+
+   }
+
+   .section-title p{
+
+       color:#64748B;
+
+       font-size:18px;
+
+       line-height:1.7;
+
+   }
+
+   .plans-grid{
+
+       display:grid;
+
+       grid-template-columns:repeat(3,1fr);
+
+       gap:30px;
+
+   }/* ===========================
+       CARD DOS PLANOS
+    =========================== */
+
+    .plan-item{
+
+        background:#fff;
+
+        border-radius:28px;
+
+        padding:40px;
+
+        box-shadow:0 15px 45px rgba(15,23,42,.08);
+
+        border:1px solid #E5EEF9;
+
+        transition:.35s;
+
     }
 
-    50%{
-        transform:translateY(-12px);
+    .plan-item:hover{
+
+        transform:translateY(-10px);
+
+        box-shadow:0 30px 60px rgba(0,0,0,.12);
+
     }
 
-    100%{
-        transform:translateY(0px);
+    .featured{
+
+        border:2px solid #2D8CFF;
+
+        transform:scale(1.05);
+
     }
-}
 
-/* RESPONSIVO */
+    .plan-badge{
 
-@media(max-width:992px){
+        display:inline-block;
 
-    .hero-container{
+        background:#EAF4FF;
 
-        flex-direction:column;
+        color:#2D8CFF;
+
+        font-size:13px;
+
+        font-weight:700;
+
+        padding:8px 16px;
+
+        border-radius:999px;
+
+        margin-bottom:25px;
+
+    }
+
+    .plan-item h3{
+
+        font-size:42px;
+
+        color:#0F172A;
+
+        margin-bottom:10px;
+
+    }
+
+    .plan-subtitle{
+
+        color:#64748B;
+
+        line-height:1.6;
+
+        margin-bottom:30px;
+
+    }
+
+    .plan-features{
+
+        list-style:none;
+
+        padding:0;
+
+        margin:0 0 35px;
+
+    }
+
+    .plan-features li{
+
+        margin-bottom:16px;
+
+        color:#334155;
+
+        font-size:17px;
+
+    }
+
+    .plan-value{
+
+        margin-bottom:30px;
+
+    }
+
+    .plan-value small{
+
+        color:#64748B;
+
+    }
+
+    .plan-value h4{
+
+        font-size:42px;
+
+        color:#0F172A;
+
+        margin-top:6px;
+
+    }
+
+    .plan-value span{
+
+        font-size:22px;
+
+        color:#64748B;
+
+    }
+
+    .plan-button{
+
+        display:block;
+
+        width:100%;
 
         text-align:center;
+
+        text-decoration:none;
+
+        background:linear-gradient(135deg,#1E88FF,#42A5FF);
+
+        color:#fff;
+
+        padding:18px;
+
+        border-radius:16px;
+
+        font-weight:700;
+
+        transition:.3s;
+
     }
 
-    .hero-left{
+    .plan-button:hover{
 
-        max-width:100%;
-    }
+        transform:translateY(-3px);
 
-    .partner-badge{
+        box-shadow:0 15px 30px rgba(30,136,255,.35);
 
-        margin:auto auto 30px;
-    }
+    }.plan-btn{
 
-    .plan-card{
+         display:block !important;
 
-        flex-direction:column;
+         width:100% !important;
 
-        gap:20px;
-    }
+         background:#1E88FF !important;
 
-    .plan-price{
+         color:#FFF !important;
 
-        text-align:center;
-    }
+         text-align:center !important;
 
-    .hero-benefits{
+         padding:18px !important;
 
-        align-items:center;
-    }
+         border-radius:14px !important;
 
-    .hero-left h1{
+         text-decoration:none !important;
 
-        font-size:48px;
-    }
+         font-weight:700 !important;
 
-    .logo{
+         margin-top:30px !important;
 
-        width:240px;
-    }
-
-    nav{
-
-        flex-direction:column;
-
-        gap:20px;
-    }
-
-    .hero-image{
-
-        max-width:450px;
-    }
-}
+     }
