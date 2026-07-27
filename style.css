@@ -1051,3 +1051,71 @@ nav{
          margin-top:30px !important;
 
      }
+     /* ==========================================================
+
+         RESPONSIVO PLANOS
+      ========================================================== */
+
+      @media (max-width:992px){
+
+          .plans-grid{
+
+              grid-template-columns:1fr;
+
+              gap:25px;
+
+          }
+
+          .featured{
+
+              transform:none;
+
+          }
+
+          .plan-item{
+
+              padding:30px;
+
+          }
+
+      }
+
+      @media (max-width:576px){
+
+          .plans{
+
+              padding:60px 5%;
+
+          }
+
+          .section-title h2{
+
+              font-size:34px;
+
+          }
+
+          .section-title p{
+
+              font-size:16px;
+
+          }
+
+          .plan-item h3{
+
+              font-size:36px;
+
+          }
+
+          .plan-features li{
+
+              font-size:16px;
+
+          }
+
+          .plan-value h4{
+
+              font-size:34px;
+
+          }
+
+      }
