@@ -567,9 +567,9 @@ nav{
 
       object-fit:contain;
 
-      margin-top:-300px;
+      margin-top:0;
 
-      margin-right:-60px;
+      margin-right:0;
 
       position:relative;
 
@@ -818,7 +818,11 @@ nav{
 
       .hero-image{
 
-          max-width:100%;
+          width:100%;
+
+          max-width:320px;
+
+          margin:0 auto;
 
       }
 
@@ -1119,3 +1123,18 @@ nav{
           }
 
       }
+@media screen and (max-width: 992px){
+
+    .plans-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:20px !important;
+    }
+
+    .plan-item{
+        width:100% !important;
+        max-width:500px !important;
+        margin:0 auto !important;
+    }
+
+}
