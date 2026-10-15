@@ -443,6 +443,24 @@ section{ padding:96px 0; }
     font-size:15px;
 }
 
+.google-rating{
+    display:inline-flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:6px 12px;
+    margin-top:8px;
+    padding:14px 20px;
+    border-radius:14px;
+    background:#FFFFFF;
+    border:1px solid var(--border);
+    color:var(--title);
+    text-decoration:none;
+    font-size:15px;
+    transition:border-color .25s;
+}
+.google-rating:hover{ border-color:var(--blue-strong); }
+.google-rating .stars{ color:#B45309; font-size:18px; letter-spacing:2px; }
+
 /* ==========================================================
    COMO CONTRATAR
 ========================================================== */
@@ -568,7 +586,7 @@ section{ padding:96px 0; }
 
 .footer-grid{
     display:grid;
-    grid-template-columns:2fr 1fr 1fr;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
     gap:32px;
     margin-bottom:40px;
 }
