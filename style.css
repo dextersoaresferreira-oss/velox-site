@@ -220,6 +220,58 @@ section{ padding:96px 0; }
 }
 
 /* ==========================================================
+   ONDE ATENDEMOS
+========================================================== */
+
+.coverage{
+    padding:28px 0;
+    background:#FFFFFF;
+    border-bottom:1px solid var(--border);
+}
+
+.coverage-inner{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:16px 28px;
+}
+
+.coverage-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--blue-strong);
+}
+
+.coverage-title h2{
+    font-size:18px;
+    color:var(--title);
+}
+
+.coverage-list{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    flex:1;
+}
+
+.coverage-list li{
+    padding:6px 14px;
+    border-radius:999px;
+    background:var(--blue-soft);
+    color:var(--title);
+    font-size:15px;
+    font-weight:500;
+    white-space:nowrap;
+}
+
+.coverage-link{
+    font-weight:600;
+    font-size:15px;
+}
+
+/* ==========================================================
    PLANOS
 ========================================================== */
 
@@ -633,6 +685,7 @@ section{ padding:96px 0; }
 
     .topbar .btn-small{ padding:0 18px; font-size:14px; }
     .hide-sm{ display:none; }
+    .coverage-list{ flex-basis:100%; }
 
     .hero h1{ font-size:34px; letter-spacing:-.5px; }
     .hero-text > p{ font-size:16px; }
